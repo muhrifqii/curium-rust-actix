@@ -1,0 +1,36 @@
+[package]
+name = "curium-services"
+version = "0.1.0"
+edition = "2021"
+authors = ["Muhammad Rifqi Fatchurrahman <muh_rif@live.com>"]
+description = "Curium. A whole new backend for the web."
+
+[dependencies]
+actix-web = "4.6.0"
+actix-cors = "0.7.0"
+tokio = { version = "1.37.0", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1.0.202", features = ["derive"] }
+serde_json = "1.0.117"
+uuid = { version = "1.8.0", features = ["serde", "v4"] }
+tracing = { version = "0.1.40", features = ["log"] }
+tracing-actix-web = "0.7.10"
+tracing-subscriber = { version = "0.3.18", features = [
+    "registry",
+    "env-filter",
+] }
+tracing-bunyan-formatter = "0.3.9"
+tracing-log = "0.2.0"
+config = "0.14.0"
+argon2 = "0.5.3"
+chrono = { version = "0.4.38", features = ["serde"] }
+jsonwebtoken = "9.3.0"
+sqlx = { version = "0.7.4", features = [
+    "runtime-tokio",
+    "postgres",
+    "chrono",
+    "uuid",
+    # "time",
+    "bigdecimal",
+    "json",
+    "migrate",
+] }
