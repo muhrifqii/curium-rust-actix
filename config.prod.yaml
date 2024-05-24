@@ -1,0 +1,21 @@
+application:
+  host: "0.0.0.0"
+  port: 8080
+  api_prefix: "/api"
+  # FIXME: Replace with the actual domain
+  cors_allow_origin: "http://localhost:3303"
+jwt:
+  # FIXME: Replace with the actual secret
+  secret: "my-secret-words-for-jwt"
+  expiration: "10m"
+  max_age: 10
+  cookie_name: "auth-token"
+  # FIXME: Replace with the actual domain
+  cookie_domain: "localhost"
+db:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "postgres"
+  database: "curium_db"
+  sslmode: false

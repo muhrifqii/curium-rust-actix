@@ -5,6 +5,9 @@ edition = "2021"
 authors = ["Muhammad Rifqi Fatchurrahman <muh_rif@live.com>"]
 description = "Curium. A whole new backend for the web."
 
+[lib]
+path = "src/lib.rs"
+
 [dependencies]
 actix-web = "4.6.0"
 actix-cors = "0.7.0"
@@ -27,6 +30,7 @@ jsonwebtoken = "9.3.0"
 sqlx = { version = "0.7.4", features = [
     "runtime-tokio",
     "postgres",
+    "macros",
     "chrono",
     "uuid",
     # "time",
@@ -34,3 +38,4 @@ sqlx = { version = "0.7.4", features = [
     "json",
     "migrate",
 ] }
+secrecy = { version = "0.8.0", features = ["serde"] }
