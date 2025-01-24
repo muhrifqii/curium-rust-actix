@@ -23,11 +23,11 @@ tracing-subscriber = { version = "0.3.18", features = [
 ] }
 tracing-bunyan-formatter = "0.3.9"
 tracing-log = "0.2.0"
-config = "0.14.0"
+config = "0.15.6"
 argon2 = "0.5.3"
 chrono = { version = "0.4.38", features = ["serde"] }
 jsonwebtoken = "9.3.0"
-sqlx = { version = "0.7.4", features = [
+sqlx = { version = "0.8.3", features = [
     "runtime-tokio",
     "postgres",
     "macros",
@@ -38,4 +38,4 @@ sqlx = { version = "0.7.4", features = [
     "json",
     "migrate",
 ] }
-secrecy = { version = "0.8.0", features = ["serde"] }
+secrecy = { version = "0.10.3", features = ["serde"] }

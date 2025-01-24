@@ -1,4 +1,4 @@
-use secrecy::{ExposeSecret as _, Secret};
+use secrecy::{ExposeSecret as _, SecretString};
 use sqlx::postgres::{PgConnectOptions, PgSslMode};
 
 #[doc = "Settings for the app"]
@@ -20,7 +20,7 @@ pub struct AppSettings {
 #[doc = "Settings for JWT security"]
 #[derive(serde::Deserialize, Clone)]
 pub struct JwtSettings {
-    pub secret: Secret<String>,
+    pub secret: SecretString,
     pub expires_in: String,
     pub max_age: i64,
     pub cookie_domain: String,
@@ -29,8 +29,8 @@ pub struct JwtSettings {
 #[doc = "Configuration for the database"]
 #[derive(serde::Deserialize, Clone)]
 pub struct DatabaseSettings {
-    pub username: Secret<String>,
-    pub password: Secret<String>,
+    pub username: SecretString,
+    pub password: SecretString,
     pub port: u16,
     pub host: String,
     pub database_name: String,
